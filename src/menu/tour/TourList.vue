@@ -8,7 +8,7 @@
     <ListView>
       <p v-if="loading" >Loading tours...</p>
       <p v-if="error">{{ error.message }}</p>
-      <TourItem  v-if="tours" v-for="(item, index) in tours" :key="index" :item="item.data" />
+      <TourItem  v-if="tours" v-for="(item, index) in tours" :key="index" :item="item" />
     </ListView>
   </div>
 </template>
@@ -35,7 +35,7 @@
       const { fetchTours }             = useTourStore()
 
       fetchTours()
-      
+
       return { tours , loading , error }
     },
   methods: {
