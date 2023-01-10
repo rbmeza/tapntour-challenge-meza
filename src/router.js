@@ -29,7 +29,8 @@ const routes = [
       component: SignUpView,
     },
     {
-      path: "/TourDetail",
+      path: "/TourDetail/:id",
+      props: true,
       name: "TourDetail",
       component: TourDetail,
     }

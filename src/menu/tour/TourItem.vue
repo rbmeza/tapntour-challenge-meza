@@ -14,8 +14,8 @@
             <dd class="text-slate-500" >{{ item.stop }}</dd>
           </div>
         </dl>
-        <DescriptionItem></DescriptionItem>
-        <FeatureItem></FeatureItem>
+        <DescriptionItem :content="item.resume"></DescriptionItem>
+        <FeatureItem :item="item"></FeatureItem>
       </div>
     </article>  
 </template>
@@ -31,7 +31,7 @@
     props : ['item'],
     methods: {
     goToDetail() {
-      this.$router.push('/TourDetail')
+      this.$router.push({ name:'TourDetail', params: { id: this.item.id } })
     }
   }
 }   
