@@ -42,10 +42,11 @@
       const { fetchTourbyId }             = useTourStore()
       const { fetchGuides }             = useGuideStore()
 
+      console.log(props.id)
       fetchTourbyId(props.id)
       fetchGuides()
 
-      console.log(guides)
+      console.log(tour)
 
       return { tour, guides , loading , error }
     },

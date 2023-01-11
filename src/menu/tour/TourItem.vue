@@ -14,7 +14,7 @@
             <dd class="text-slate-500" >{{ item.stop }}</dd>
           </div>
         </dl>
-        <DescriptionItem :content="item.resume"></DescriptionItem>
+        <DescriptionItem :content="item.desc"></DescriptionItem>
         <FeatureItem :item="item"></FeatureItem>
       </div>
     </article>  

@@ -33,7 +33,7 @@ export const useTourStore = defineStore({
       this.tour = null
       this.loading = true
       try {
-        const tourbyid_endpoint = tour_endpoint + '/detail/' + id
+        const tourbyid_endpoint = tour_endpoint + '/' + id
         this.tour = await axios.post(tourbyid_endpoint)
         .then((response) => response.data)
       } catch (error) {
